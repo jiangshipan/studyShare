@@ -1,0 +1,1 @@
+package com.jsp.studyShare.utils;import com.alibaba.fastjson.JSON;import java.util.Map;public class JsonUtil {    public static Map<String, String> strToMap(String str) {        Map<String, String> map =  (Map<String, String>)JSON.parse(str);        return map;    }}

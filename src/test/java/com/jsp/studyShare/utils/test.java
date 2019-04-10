@@ -1,0 +1,1 @@
+package com.jsp.studyShare.utils;import org.junit.Test;import java.util.UUID;public class test {    @Test    public void test() {        String result = UUID.randomUUID().toString().replaceAll("-", "");        System.out.println(result);    }}
