@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.util.unit.DataSize;
 
 import javax.servlet.MultipartConfigElement;
 
@@ -22,8 +23,8 @@ public class StudyShareApplication {
 	 public MultipartConfigElement multipartConfigElement() {
 		 MultipartConfigFactory factory = new MultipartConfigFactory();
 		 //单个数据大小
-		 factory.setMaxFileSize("102400KB");
-		 factory.setMaxRequestSize("102400KB");
+		 factory.setMaxFileSize(DataSize.parse("10240000KB"));
+		 factory.setMaxRequestSize(DataSize.parse("10240000KB"));
 		 return factory.createMultipartConfig();
 	 }
 }
